@@ -1,10 +1,8 @@
-from django.template.loader import render_to_string
 import warnings
 warnings.filterwarnings("ignore", message="Data Validation extension is not supported")
 import matplotlib
 matplotlib.use('agg')  
 import matplotlib.pyplot as plt
-from .forms import UploadFileForm,UploadTable1FileForm,DownloadFileForm
 from django.shortcuts import render
 import pandas as pd
 import numpy as np
@@ -14,7 +12,6 @@ import math
 from django.http import HttpResponse
 from django.template.loader import get_template
 from xhtml2pdf import pisa
-from django.views import View
 
 def render_to_pdf(template_src, context_dict={}):
 	template = get_template(template_src)
