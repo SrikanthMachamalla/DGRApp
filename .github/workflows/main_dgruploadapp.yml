@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - demodjangoapp
+name: Build and deploy Python app to Azure Web App - dgruploadapp
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_9ABF15A07B574ADB9A4C64187605D934 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3883D693781245CCBD7B440E7AD7842C }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_73CE73ABAF144162A6EE00BB228B32CF }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F2D2A723930E4C6DB8A88A38E0DD1E80 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_4D72897CFA7E4C998C6D0ADAFB6B863E }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_F7174CF2523C4BDBA7F69D7F72230B91 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'demodjangoapp'
+          app-name: 'dgruploadapp'
           slot-name: 'Production'
           
